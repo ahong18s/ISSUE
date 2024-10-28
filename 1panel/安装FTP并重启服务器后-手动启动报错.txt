@@ -1,0 +1,75 @@
+root@dev:/home/ahong# systemctl status pure-ftpd.service
+× pure-ftpd.service
+     Loaded: loaded (/etc/init.d/pure-ftpd; generated)
+     Active: failed (Result: exit-code) since Mon 2024-10-28 08:21:50 CST; 58s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 2089 ExecStart=/etc/init.d/pure-ftpd start (code=exited, status=2)
+        CPU: 67ms
+
+Oct 28 08:21:50 dev systemd[1]: Starting pure-ftpd.service...
+Oct 28 08:21:50 dev pure-ftpd[2089]: Starting ftp server:
+Oct 28 08:21:50 dev pure-ftpd[2097]: /usr/sbin/pure-ftpd-wrapper: Invalid configuration file >
+Oct 28 08:21:50 dev systemd[1]: pure-ftpd.service: Control process exited, code=exited, statu>
+Oct 28 08:21:50 dev systemd[1]: pure-ftpd.service: Failed with result 'exit-code'.
+Oct 28 08:21:50 dev systemd[1]: Failed to start pure-ftpd.service.
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-13/13 (END)
+root@dev:/home/ahong# journalctl -xeu pure-ftpd.service
+░░ An ExecStart= process belonging to unit pure-ftpd.service has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 2.
+Oct 28 08:20:53 dev systemd[1]: pure-ftpd.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ The unit pure-ftpd.service has entered the 'failed' state with result 'exit-code'.
+Oct 28 08:20:53 dev systemd[1]: Failed to start pure-ftpd.service.
+░░ Subject: A start job for unit pure-ftpd.service has failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit pure-ftpd.service has finished with a failure.
+░░ 
+░░ The job identifier is 184 and the job result is failed.
+Oct 28 08:21:50 dev systemd[1]: Starting pure-ftpd.service...
+░░ Subject: A start job for unit pure-ftpd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit pure-ftpd.service has begun execution.
+░░ 
+░░ The job identifier is 570.
+Oct 28 08:21:50 dev pure-ftpd[2089]: Starting ftp server:
+Oct 28 08:21:50 dev pure-ftpd[2097]: /usr/sbin/pure-ftpd-wrapper: Invalid configuration file /etc/pure-ftpd/conf/PureDB: "/etc/pure-ftpd/pureftpd.pdb": No such file
+Oct 28 08:21:50 dev systemd[1]: pure-ftpd.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ An ExecStart= process belonging to unit pure-ftpd.service has exited.
+░░ 
+░░ The process' exit code is 'exited' and its exit status is 2.
+Oct 28 08:21:50 dev systemd[1]: pure-ftpd.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ The unit pure-ftpd.service has entered the 'failed' state with result 'exit-code'.
+Oct 28 08:21:50 dev systemd[1]: Failed to start pure-ftpd.service.
+░░ Subject: A start job for unit pure-ftpd.service has failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit pure-ftpd.service has finished with a failure.
+░░ 
+░░ The job identifier is 570 and the job result is failed.
+lines 16-64/64 (END)
+
