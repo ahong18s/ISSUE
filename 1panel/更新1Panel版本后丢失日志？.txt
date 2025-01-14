@@ -1,0 +1,23 @@
+root@server:~# cat /var/log/auth.log* | grep -aE "(Failed password for|Connection closed by authenticating user|Accepted)"
+2025-01-13T08:33:43.848352+08:00 server sshd[162239]: Accepted password for root from 120.224.115.62 port 51272 ssh2
+2025-01-13T10:44:04.770993+08:00 server sshd[168022]: Accepted password for root from 120.224.115.62 port 11067 ssh2
+Oct 10 01:24:54 server sshd[1545]: Accepted password for root from 120.224.115.62 port 21176 ssh2
+Oct 10 01:39:50 server sshd[928]: Accepted password for root from 120.224.115.62 port 56357 ssh2
+Oct 10 02:13:44 server sshd[954]: Accepted password for root from 120.224.115.62 port 52883 ssh2
+2024-10-10T02:43:44.574792+00:00 server sshd[1046]: Accepted password for root from 120.224.115.62 port 46007 ssh2
+2024-10-10T03:02:16.458496+00:00 server sshd[3752]: Accepted password for root from 120.224.115.62 port 17417 ssh2
+2024-10-10T03:14:06.634116+00:00 server sshd[4105]: Connection closed by authenticating user root 127.0.0.1 port 58268 [preauth]
+2024-10-10T03:18:13.831049+00:00 server sshd[4906]: Accepted password for root from 120.224.115.62 port 49931 ssh2
+2024-10-10T03:20:38.619957+00:00 server sshd[4992]: Accepted password for root from 120.224.115.62 port 53910 ssh2
+2024-10-10T03:40:17.420849+00:00 server sshd[8249]: Connection closed by authenticating user root 127.0.0.1 port 55354 [preauth]
+2024-10-10T06:19:56.763093+00:00 server sshd[59737]: Accepted password for root from 120.224.115.62 port 48119 ssh2
+2024-10-10T09:16:56.746702+00:00 server sshd[60012]: Accepted password for root from 120.224.115.62 port 60263 ssh2
+2024-10-10T17:21:08.209281+08:00 server sshd[60174]: Accepted password for root from 120.224.115.62 port 3820 ssh2
+2024-10-10T17:41:27.055717+08:00 server sshd[1725]: Accepted password for root from 120.224.115.62 port 47178 ssh2
+2024-10-11T19:37:04.539409+08:00 server sshd[30304]: Accepted password for root from 123.168.249.237 port 1148 ssh2
+2024-10-11T21:29:21.512881+08:00 server sshd[39992]: Failed password for root from 141.98.10.96 port 42440 ssh2
+2024-10-11T21:29:42.632539+08:00 server sshd[39994]: Failed password for invalid user test from 141.98.10.96 port 44620 ssh2
+2024-10-25T20:08:49.007311+08:00 server sshd[528561]: Accepted password for root from 123.168.249.237 port 4953 ssh2
+root@server:~# cat /var/log/secure* | grep -aE '(Failed password for|Accepted)'
+cat: '/var/log/secure*': No such file or directory
+root@server:~#
